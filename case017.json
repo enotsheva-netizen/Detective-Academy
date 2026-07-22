@@ -1,0 +1,7 @@
+{
+  "case": "Case File 017: The Blackwood Manor Murder",
+  "level": "B1+",
+  "language_focus": ["must have + past participle", "might have + past participle", "can't have + past participle"],
+  "solution": "Daniel Blackwood killed Arthur Blackwood after drugging his coffee. His phone record disproves his alibi.",
+  "note": "The website embeds the active content in script.js so it can run when index.html is opened directly from a computer. This JSON file is an editable case record and source reference."
+}

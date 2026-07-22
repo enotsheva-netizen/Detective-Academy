@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Detective Academy: a B1+ speaking lesson on crimes, evidence and deduction.">
+  <title>Detective Academy — Case File 017</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#intro" aria-label="Detective Academy home"><span>DA</span> Detective Academy</a>
+    <div class="progress-wrap"><span id="progressText">0 / 10 missions</span><div class="progress"><i id="progressBar"></i></div></div>
+    <button class="icon-button" id="teacherButton" type="button" aria-label="Open teacher mode">Teacher mode</button>
+  </header>
+
+  <nav class="rail" aria-label="Lesson stages">
+    <a href="#briefing">01 <span>Briefing</span></a><a href="#warmup">02 <span>Warm-up</span></a><a href="#vocabulary">03 <span>Vocabulary</span></a><a href="#grammar">04 <span>Grammar</span></a><a href="#scene">05 <span>Scene</span></a><a href="#suspects">06 <span>Suspects</span></a><a href="#interrogation">07 <span>Interrogate</span></a><a href="#board">08 <span>Board</span></a><a href="#jury">09 <span>Jury</span></a>
+  </nav>
+
+  <main>
+    <section id="intro" class="hero page-section">
+      <p class="eyebrow">Confidential · Case File 017</p>
+      <h1>THE BLACKWOOD<br><em>MANOR MURDER</em></h1>
+      <p class="lede">A B1+ detective speaking lesson about crime, evidence and deduction.</p>
+      <div class="hero-facts"><span>Victim: Arthur Blackwood</span><span>Time: 8:45 PM</span><span>Location: The library</span></div>
+      <a class="button primary" href="#briefing">Open the case <b>→</b></a>
+      <p class="quiet">Work in pairs. Speak English. Trust no one.</p>
+    </section>
+
+    <section id="briefing" class="page-section casefile revealable" data-mission="briefing">
+      <div class="section-heading"><p class="eyebrow">Presentation · 5 min</p><h2>Case briefing</h2><p>Read the report aloud. What questions do detectives still need to answer?</p></div>
+      <div class="file-grid">
+        <article><small>VICTIM</small><h3>Arthur Blackwood, 61</h3><p>Owner of Blackwood Manor and a successful property developer.</p></article>
+        <article><small>KNOWN FACT</small><h3>Found at 9:05 PM</h3><p>His body was discovered in the locked library by the housekeeper, Sarah Collins.</p></article>
+        <article><small>YOUR MISSION</small><h3>Build a convincing case</h3><p>Collect evidence, question suspects and use deduction language to reach a verdict.</p></article>
+      </div>
+      <button class="button secondary mission-button" data-complete="briefing">We have read the briefing</button>
+    </section>
+
+    <section id="warmup" class="page-section revealable" data-mission="warmup">
+      <div class="section-heading"><p class="eyebrow">Presentation · 8 min</p><h2>First impressions</h2><p>Look at the items from the library. In pairs, choose one and make a first theory.</p></div>
+      <div class="warmup-grid">
+        <button class="object-card" data-prompt="A smashed clock stopped at 8:45. What could that tell us?"><b>◷</b><span>Broken clock</span></button>
+        <button class="object-card" data-prompt="A coffee cup contains sleeping medicine. Who prepared it, and why?"><b>☕</b><span>Coffee cup</span></button>
+        <button class="object-card" data-prompt="A leather glove lies by an open window. Was it dropped, or planted?"><b>⌁</b><span>Leather glove</span></button>
+        <button class="object-card" data-prompt="There is a muddy footprint beside the desk. Who could have made it?"><b>◉</b><span>Muddy print</span></button>
+      </div>
+      <div class="prompt-box" id="warmupPrompt" aria-live="polite">Choose an object to reveal a discussion question.</div>
+      <button class="button secondary mission-button" data-complete="warmup">We made our first theory</button>
+    </section>
+
+    <section id="vocabulary" class="page-section revealable" data-mission="vocabulary">
+      <div class="section-heading"><p class="eyebrow">Presentation + controlled practice · 15 min</p><h2>Detective's notebook</h2><p>Click each card to turn it over. Say the word, definition and example to your partner.</p></div>
+      <div class="vocab-grid" id="vocabGrid"></div>
+      <div class="quiz-panel">
+        <div><p class="eyebrow">Quick check</p><h3 id="quizQuestion">Loading question…</h3></div>
+        <div class="quiz-options" id="quizOptions"></div><p id="quizFeedback" aria-live="polite"></p>
+      </div>
+      <button class="button secondary mission-button" data-complete="vocabulary">Vocabulary checked</button>
+    </section>
+
+    <section id="grammar" class="page-section revealable" data-mission="grammar">
+      <div class="section-heading"><p class="eyebrow">Presentation + practice · 15 min</p><h2>Read the evidence</h2><p>Choose the best deduction. Then discuss: how certain are you?</p></div>
+      <div class="deduction-layout">
+        <article class="rule-card"><p class="eyebrow">Deduction language</p><h3>must have + past participle</h3><p>We are almost certain: <em>Jack must have entered through the garden.</em></p><h3>might have + past participle</h3><p>It is possible: <em>Emily might have left the restaurant.</em></p><h3>can't have + past participle</h3><p>We think it is impossible: <em>Daniel can't have been on the phone all evening.</em></p></article>
+        <div class="grammar-questions" id="grammarQuestions"></div>
+      </div>
+      <button class="button secondary mission-button" data-complete="grammar">Grammar practice finished</button>
+    </section>
+
+    <section id="scene" class="page-section revealable" data-mission="scene">
+      <div class="section-heading"><p class="eyebrow">Guided speaking · 12 min</p><h2>Inspect the crime scene</h2><p>Open every clue. Keep notes: which suspect does each clue connect to?</p></div>
+      <div class="scene-room" id="sceneRoom">
+        <div class="room-label">BLACKWOOD MANOR · LIBRARY · 9:05 PM</div>
+        <button class="clue clue-clock" data-clue="clock">◷<span>clock</span></button><button class="clue clue-cup" data-clue="cup">☕<span>cup</span></button><button class="clue clue-phone" data-clue="phone">▣<span>phone</span></button><button class="clue clue-knife" data-clue="knife">†<span>knife</span></button><button class="clue clue-window" data-clue="window">▦<span>window</span></button><button class="clue clue-print" data-clue="print">◉<span>print</span></button>
+      </div>
+      <div class="clue-detail" id="clueDetail" aria-live="polite"><p class="eyebrow">Evidence log</p><h3>Choose an item in the room</h3><p>Its details and a speaking prompt will appear here.</p></div>
+      <button class="button secondary mission-button" data-complete="scene">All evidence inspected</button>
+    </section>
+
+    <section id="suspects" class="page-section revealable" data-mission="suspects">
+      <div class="section-heading"><p class="eyebrow">Guided speaking · 12 min</p><h2>Meet the suspects</h2><p>Everyone has a motive. Everyone has an alibi. Open each file and decide what you would ask.</p></div>
+      <div class="suspect-grid" id="suspectGrid"></div>
+      <div class="suspect-detail" id="suspectDetail"><p class="eyebrow">Suspect file</p><h3>Select a suspect</h3><p>Read their motive, alibi and hidden inconsistency.</p></div>
+      <button class="button secondary mission-button" data-complete="suspects">We reviewed the suspects</button>
+    </section>
+
+    <section id="interrogation" class="page-section revealable" data-mission="interrogation">
+      <div class="section-heading"><p class="eyebrow">Controlled practice → production · 10 min</p><h2>Interrogation room</h2><p>One student is a suspect; one is a detective. Draw a prompt and ask a follow-up question.</p></div>
+      <div class="interrogation-card"><p class="eyebrow">Question card</p><h3 id="interrogationPrompt">Press “draw a question” when you are ready.</h3><button class="button primary" id="drawPrompt">Draw a question</button><button class="text-button" id="startTimer">Start 90-second interview</button><strong id="timer" aria-live="polite">01:30</strong></div>
+      <aside class="language-bank"><h3>Useful detective language</h3><p>Where were you when…? · Can anyone confirm that? · That doesn't add up. · The evidence suggests… · You must have…</p></aside>
+      <button class="button secondary mission-button" data-complete="interrogation">Interview complete</button>
+    </section>
+
+    <section id="board" class="page-section revealable" data-mission="board">
+      <div class="section-heading"><p class="eyebrow">Production · 10 min</p><h2>Evidence board</h2><p>Choose a suspect, then attach the evidence you think is relevant. Explain every connection.</p></div>
+      <div class="board-controls"><label>Focus suspect <select id="boardSuspect"></select></label><button class="button secondary" id="clearBoard">Clear board</button></div>
+      <div class="evidence-board"><div class="board-suspect" id="boardFocus">Choose a suspect</div><div class="board-evidence" id="boardEvidence"></div></div>
+      <p class="board-note" id="boardNote">Tip: a clue can support a theory, but it does not always prove it.</p>
+      <button class="button secondary mission-button" data-complete="board">Our evidence board is ready</button>
+    </section>
+
+    <section id="jury" class="page-section revealable" data-mission="jury">
+      <div class="section-heading"><p class="eyebrow">Production + feedback · 10 min</p><h2>The jury room</h2><p>Vote only after you can give two pieces of evidence and use one deduction sentence.</p></div>
+      <div class="jury-grid" id="juryGrid"></div>
+      <div class="verdict-box"><label for="reasoning">Our verdict: We believe… because…</label><textarea id="reasoning" placeholder="For example: Daniel must have lied about his phone call. The phone records show…"></textarea><button class="button primary" id="submitVerdict">Submit verdict</button><p id="verdictFeedback" aria-live="polite"></p></div>
+    </section>
+
+    <section id="reveal" class="page-section final revealable" data-mission="reveal">
+      <p class="eyebrow">Case conclusion</p><h2>The sealed verdict</h2><p>Only open this after the jury has voted.</p><button class="button primary" id="openReveal">Open the envelope</button>
+      <div class="reveal-card" id="revealCard" hidden><p class="eyebrow">Official conclusion</p><h2>Daniel Blackwood</h2><p>Daniel ended his phone call at 8:20 PM, met his father in the library and put sleeping medicine in the coffee. When Arthur threatened to change his will, Daniel used the knife. He then tried to create a false alibi.</p><p><strong>Final reflection:</strong> Which clue was strongest? Which clue was misleading? What <em>might</em> have happened differently?</p></div>
+    </section>
+  </main>
+
+  <footer>Detective Academy · Case File 017 · B1+ Crimes & Punishment</footer>
+
+  <dialog id="teacherDialog"><div class="dialog-header"><p class="eyebrow">Teacher mode</p><button class="close-dialog" aria-label="Close teacher mode">×</button></div><div id="teacherContent"></div></dialog>
+  <script src="script.js"></script>
+</body>
+</html>
